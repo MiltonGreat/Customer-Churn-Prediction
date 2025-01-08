@@ -2,6 +2,32 @@
 
 This project aims to predict which customers are likely to unsubscribe (churn) from email campaigns using various machine learning models based on engagement metrics. The dataset contains customer information such as tenure, number of devices registered, preferred order category, satisfaction score, and other behavioral features. The goal is to predict churn and provide actionable insights to proactively target customers.
 
+### Problem Statement
+
+Retaining customers is more cost-effective than acquiring new ones. This project aimed to predict customer churn based on behavioral data to enable proactive retention strategies.
+
+### Solution Approach
+
+Data: Customer demographics, engagement metrics, and subscription history.
+
+Methods:
+
+- Built a classification model using Logistic Regression and Random Forest to predict churn likelihood.
+- Engineered features such as engagement frequency, recency of interactions, and subscription tenure.
+- Analyzed feature importance to identify key drivers of churn.
+- Tools: Python (pandas, Scikit-learn, Matplotlib).
+
+### Results
+
+- Achieved an F1 score of 0.82 for churn prediction.
+- Identified key churn drivers: low engagement frequency and long response times for support queries.
+- Recommended targeted outreach campaigns, projected to reduce churn by 10%.
+
+### Key Insights
+
+- Understanding the drivers of churn enables businesses to implement timely interventions.
+- Predictive modeling helps allocate retention resources more effectively.
+
 ## Dataset
 
 The dataset is from an e-commerce company and contains customer behavior data. The target variable is `Churn`, a binary indicator of whether a customer has unsubscribed from email campaigns. The dataset contains information on customer demographics, engagement history, and transactional behavior. Some key features include:

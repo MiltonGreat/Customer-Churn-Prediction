@@ -12,21 +12,11 @@ Data: Customer demographics, engagement metrics, and subscription history.
 
 Methods:
 
-- Built a classification model using Logistic Regression and Random Forest to predict churn likelihood.
-- Engineered features such as engagement frequency, recency of interactions, and subscription tenure.
-- Analyzed feature importance to identify key drivers of churn.
-- Tools: Python (pandas, Scikit-learn, Matplotlib).
-
-### Results
-
-- Achieved an F1 score of 0.82 for churn prediction.
-- Identified key churn drivers: low engagement frequency and long response times for support queries.
-- Recommended targeted outreach campaigns, projected to reduce churn by 10%.
-
-### Key Insights
-
-- Understanding the drivers of churn enables businesses to implement timely interventions.
-- Predictive modeling helps allocate retention resources more effectively.
+1. Data Cleaning: Missing values were handled, outliers were removed from numerical columns, and categorical features were encoded using one-hot encoding.
+2. Feature Engineering: Derived features like average cashback per interaction and complaints per tenure were added to improve predictive power.
+3. Data Balancing: SMOTE and random undersampling were applied to balance the target variable classes.
+4. Model Training: Various models were trained, including Logistic Regression, XGBoost, and Random Forest. Logistic Regression was adjusted for class imbalance, and the XGBoost model was trained with scale adjustments to handle imbalance.
+4. Evaluation: Models were evaluated on accuracy, precision, recall, and F1-score. Additionally, the decision threshold for Logistic Regression was adjusted to optimize recall, providing a better balance between precision and recall.
 
 ## Dataset
 
@@ -50,23 +40,24 @@ After balancing the dataset to address class imbalance, the distribution was as 
 - Non-Churn (0): 1934 samples
 - Churn (1): 1354 samples
 
-## Methodolgy
+### Results
 
-1. Data Cleaning: Missing values were handled, outliers were removed from numerical columns, and categorical features were encoded using one-hot encoding.
-2. Feature Engineering: Derived features like average cashback per interaction and complaints per tenure were added to improve predictive power.
-3. Data Balancing: SMOTE and random undersampling were applied to balance the target variable classes.
-4. Model Training: Various models were trained, including Logistic Regression, XGBoost, and Random Forest. Logistic Regression was adjusted for class imbalance, and the XGBoost model was trained with scale adjustments to handle imbalance.
-4. Evaluation: Models were evaluated on accuracy, precision, recall, and F1-score. Additionally, the decision threshold for Logistic Regression was adjusted to optimize recall, providing a better balance between precision and recall.
+- Achieved an F1 score of 0.82 for churn prediction.
+- Identified key churn drivers: low engagement frequency and long response times for support queries.
+- Recommended targeted outreach campaigns, projected to reduce churn by 10%.
 
 ## Key Findings
 
-- The XGBoost model demonstrated the highest accuracy in predicting customer churn, with an overall accuracy of 94%. The Logistic Regression model, while slightly less accurate, offered good interpretability and could be adjusted to prioritize recall.
+- The XGBoost model demonstrated the highest accuracy in predicting customer churn, with an overall accuracy of 94%.
+- The Logistic Regression model, while slightly less accurate, offered good interpretability and could be adjusted to prioritize recall.
 
 ### Future Work
 
-Hyperparameter Tuning: Additional tuning of models like XGBoost and Random Forest to potentially improve performance.
-Feature Engineering: Explore more derived features or interactions between features for improved predictions.
-Explainability: Use SHAP values to explain model predictions in a more interpretable way, offering insights into key drivers of churn.
+1. Hyperparameter Tuning: Additional tuning of models like XGBoost and Random Forest to potentially improve performance.
+
+2. Feature Engineering: Explore more derived features or interactions between features for improved predictions.
+
+3. Explainability: Use SHAP values to explain model predictions in a more interpretable way, offering insights into key drivers of churn.
 
 ### Source: 
 

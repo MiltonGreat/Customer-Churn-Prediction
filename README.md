@@ -61,6 +61,4 @@ After balancing the dataset to address class imbalance, the distribution was as 
 
 ### Source: 
 
-https://www.kaggle.com/datasets/samuelsemaya/e-commerce-customer-churn
-
-
+Dataset: [E-commerce Customer Churn Dataset on Kaggle](https://www.kaggle.com/datasets/samuelsemaya/e-commerce-customer-churn)

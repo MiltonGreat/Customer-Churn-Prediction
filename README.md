@@ -1,22 +1,10 @@
 # E-Commerce Customer Churn Prediction
 
-This project aims to predict which customers are likely to unsubscribe (churn) from email campaigns using various machine learning models based on engagement metrics. The dataset contains customer information such as tenure, number of devices registered, preferred order category, satisfaction score, and other behavioral features. The goal is to predict churn and provide actionable insights to proactively target customers.
+This project aims to predict customer churn (unsubscribing from email campaigns) using machine learning models based on various engagement metrics. The goal is to identify customers at risk of churn and provide actionable insights to improve customer retention through targeted strategies.
 
 ### Problem Statement
 
-Retaining customers is more cost-effective than acquiring new ones. This project aimed to predict customer churn based on behavioral data to enable proactive retention strategies.
-
-### Solution Approach
-
-Data: Customer demographics, engagement metrics, and subscription history.
-
-Methods:
-
-1. Data Cleaning: Missing values were handled, outliers were removed from numerical columns, and categorical features were encoded using one-hot encoding.
-2. Feature Engineering: Derived features like average cashback per interaction and complaints per tenure were added to improve predictive power.
-3. Data Balancing: SMOTE and random undersampling were applied to balance the target variable classes.
-4. Model Training: Various models were trained, including Logistic Regression, XGBoost, and Random Forest. Logistic Regression was adjusted for class imbalance, and the XGBoost model was trained with scale adjustments to handle imbalance.
-4. Evaluation: Models were evaluated on accuracy, precision, recall, and F1-score. Additionally, the decision threshold for Logistic Regression was adjusted to optimize recall, providing a better balance between precision and recall.
+Retaining existing customers is more cost-effective than acquiring new ones. By predicting customer churn based on engagement and behavioral data, businesses can take proactive measures to improve retention and customer loyalty.
 
 ## Dataset
 
@@ -40,16 +28,37 @@ After balancing the dataset to address class imbalance, the distribution was as 
 - Non-Churn (0): 1934 samples
 - Churn (1): 1354 samples
 
+### Solution Approach
+
+Data: Customer demographics, engagement metrics, and subscription history.
+
+### Methods
+
+1. **Data Cleaning**: Missing values were handled, outliers were removed from numerical columns, and categorical features were encoded using one-hot encoding.
+2. **Feature Engineering**: Derived features like average cashback per interaction and complaints per tenure were added to improve predictive power.
+3. **Data Balancing**: SMOTE and random undersampling were applied to balance the target variable classes.
+4. **Model Training**: Various models were trained, including Logistic Regression, XGBoost, and Random Forest. Logistic Regression was adjusted for class imbalance, and the XGBoost model was trained with scale adjustments to handle imbalance.
+5. **Evaluation**: Models were evaluated on accuracy, precision, recall, and F1-score. Additionally, the decision threshold for Logistic Regression was adjusted to optimize recall, providing a better balance between precision and recall.
+
 ### Results
 
-- Achieved an F1 score of 0.82 for churn prediction.
-- Identified key churn drivers: low engagement frequency and long response times for support queries.
-- Recommended targeted outreach campaigns, projected to reduce churn by 10%.
+#### Model Performance
+- The XGBoost model demonstrated the highest performance with an overall accuracy of 94%.
+- The Logistic Regression model, though slightly less accurate, offered strong interpretability and high recall (0.95 for churn class), making it useful for identifying at-risk customers.
+
+#### Key Drivers of Churn
+- Customers with higher complaint frequency and shorter tenures are more likely to churn.
+- Tenure was found to be the most influential factor, followed by complaints per tenure and cashback amount.
+
+#### Churn Prediction Performance
+- The model achieved an F1-score of 0.82 for churn prediction.
+- Identified key churn drivers, such as low engagement frequency and long response times for support queries.
 
 ## Key Findings
 
-- The XGBoost model demonstrated the highest accuracy in predicting customer churn, with an overall accuracy of 94%.
-- The Logistic Regression model, while slightly less accurate, offered good interpretability and could be adjusted to prioritize recall.
+- XGBoost: Best-performing model, with the highest accuracy of 94%.
+- Logistic Regression: Offers a good balance of interpretability and performance, with the ability to adjust decision thresholds for better recall.
+- Churn Drivers: Low engagement and poor support experiences are the most significant predictors of churn.
 
 ### Future Work
 

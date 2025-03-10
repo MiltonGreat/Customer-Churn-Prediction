@@ -22,12 +22,6 @@ The dataset is from an e-commerce company and contains customer behavior data. T
 - **CashbackAmount**: Average cashback earned by the customer (numeric)
 - **Churn**: Target variable (binary)
 
-## Class Distribution
-
-After balancing the dataset to address class imbalance, the distribution was as follows:
-- Non-Churn (0): 1934 samples
-- Churn (1): 1354 samples
-
 ### Solution Approach
 
 Data: Customer demographics, engagement metrics, and subscription history.
@@ -39,6 +33,12 @@ Data: Customer demographics, engagement metrics, and subscription history.
 3. **Data Balancing**: SMOTE and random undersampling were applied to balance the target variable classes.
 4. **Model Training**: Various models were trained, including Logistic Regression, XGBoost, and Random Forest. Logistic Regression was adjusted for class imbalance, and the XGBoost model was trained with scale adjustments to handle imbalance.
 5. **Evaluation**: Models were evaluated on accuracy, precision, recall, and F1-score. Additionally, the decision threshold for Logistic Regression was adjusted to optimize recall, providing a better balance between precision and recall.
+
+### Class Distribution
+
+After balancing the dataset to address class imbalance, the distribution was as follows:
+- Non-Churn (0): 1934 samples
+- Churn (1): 1354 samples
 
 ### Results
 
